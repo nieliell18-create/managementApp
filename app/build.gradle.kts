@@ -8,6 +8,12 @@ android {
         version = release(37)
     }
 
+
+    buildFeatures {
+        viewBinding = true
+    }
+
+
     defaultConfig {
         applicationId = "com.example.managementapp"
         minSdk = 24
@@ -21,8 +27,7 @@ android {
     buildTypes {
         release {
             optimization {
-                enable = true
-                packageScope = setOf("androidx.**", "kotlin.**", "kotlinx.**")
+                enable = false
             }
         }
     }
